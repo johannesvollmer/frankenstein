@@ -26,7 +26,7 @@ async fn main() {
                         let api_clone = api.clone();
 
                         tokio::spawn(async move {
-                            process_message(message, api_clone).await;
+                            process_message(*message, api_clone).await;
                         });
 
                         update_params = update_params_builder

@@ -274,59 +274,59 @@ pub struct Update {
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub message: Option<Message>,
+    pub message: Option<Box<Message>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub edited_message: Option<Message>,
+    pub edited_message: Option<Box<Message>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub channel_post: Option<Message>,
+    pub channel_post: Option<Box<Message>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub edited_channel_post: Option<Message>,
+    pub edited_channel_post: Option<Box<Message>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub inline_query: Option<InlineQuery>,
+    pub inline_query: Option<Box<InlineQuery>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub chosen_inline_result: Option<ChosenInlineResult>,
+    pub chosen_inline_result: Option<Box<ChosenInlineResult>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub callback_query: Option<CallbackQuery>,
+    pub callback_query: Option<Box<CallbackQuery>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub shipping_query: Option<ShippingQuery>,
+    pub shipping_query: Option<Box<ShippingQuery>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub pre_checkout_query: Option<PreCheckoutQuery>,
+    pub pre_checkout_query: Option<Box<PreCheckoutQuery>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub poll: Option<Poll>,
+    pub poll: Option<Box<Poll>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub poll_answer: Option<PollAnswer>,
+    pub poll_answer: Option<Box<PollAnswer>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub my_chat_member: Option<ChatMemberUpdated>,
+    pub my_chat_member: Option<Box<ChatMemberUpdated>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub chat_member: Option<ChatMemberUpdated>,
+    pub chat_member: Option<Box<ChatMemberUpdated>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(setter(into, strip_option), default)]
-    pub chat_join_request: Option<ChatJoinRequest>,
+    pub chat_join_request: Option<Box<ChatJoinRequest>>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Builder)]
